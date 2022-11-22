@@ -5,7 +5,7 @@ service:
 ingress:
   annotations:
     kubernetes.io/ingress.class: traefik
-    # cert-manager.io/cluster-issuer: self-signed-issuer
+    cert-manager.io/cluster-issuer: self-signed-issuer
     # traefik.ingress.kubernetes.io/router.middlewares: default-redirect-https@kubernetescrd
   host:
   path: /
