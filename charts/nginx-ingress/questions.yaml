@@ -1,0 +1,18 @@
+questions:
+- variable: service.name
+  group: Service
+  label: Service Name
+  type: string
+  required: true
+- variable: service.port
+  group: Service
+  label: Service Port
+  type: int
+  required: true
+  default: null
+
+- variable: ingress.host
+  group: Ingress
+  label: Host
+  type: hostname
+  required: true

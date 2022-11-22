@@ -1,0 +1,11 @@
+service:
+  name:
+  port:
+
+ingress:
+  className: ""
+  annotations:
+    nginx.ingress.kubernetes.io/force-ssl-redirect: 'true'
+  host:
+  path: /
+  pathType: Prefix
