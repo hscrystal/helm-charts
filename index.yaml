@@ -13,6 +13,16 @@ entries:
     version: 0.1.0
   traefik-ingress:
   - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2022-11-23T09:30:17.18926701Z"
+    description: A Helm chart for traefik-ingress
+    digest: 954415e2214566449746b8bc215204360869c9c34ef09f702f98272d2f56f58d
+    name: traefik-ingress
+    type: application
+    urls:
+    - https://github.com/hscrystal/helm-charts/releases/download/traefik-ingress-0.1.2/traefik-ingress-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
     appVersion: 0.0.0
     created: "2022-11-22T06:17:43.662498108Z"
     description: A Helm chart for traefik-ingress
@@ -32,4 +42,4 @@ entries:
     urls:
     - https://github.com/hscrystal/helm-charts/releases/download/traefik-ingress-0.1.0/traefik-ingress-0.1.0.tgz
     version: 0.1.0
-generated: "2022-11-22T06:29:00.961993815Z"
+generated: "2022-11-23T09:30:17.18927601Z"
