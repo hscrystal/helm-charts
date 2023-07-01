@@ -1,6 +1,6 @@
 apiVersion: v2
-name: charts/nginx-ingress/.helmignore
-description: A Helm chart for charts/nginx-ingress/.helmignore
+name: nginx-ingress-external-service
+description: A Helm chart for nginx-ingress-external-service
 
 # A chart can be either an 'application' or a 'library' chart.
 #
