@@ -1,7 +1,7 @@
 questions:
 - variable: endpoints.host
   group: Endpoints
-  label: Endpoints Name
+  label: Endpoints Host
   type: string
   required: true
 
