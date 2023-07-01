@@ -1,0 +1,19 @@
+questions:
+- variable: endpoints.host
+  group: Endpoints
+  label: Endpoints Name
+  type: string
+  required: true
+
+- variable: endpoints.port
+  group: Endpoints
+  label: Endpoints Port
+  type: int
+  required: true
+  default: null
+
+- variable: ingress.host
+  group: Ingress
+  label: Host
+  type: hostname
+  required: true
