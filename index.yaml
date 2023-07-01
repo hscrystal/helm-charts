@@ -3,6 +3,16 @@ entries:
   nginx-ingress:
   - apiVersion: v2
     appVersion: 0.0.0
+    created: "2023-07-01T03:46:11.769327493Z"
+    description: A Helm chart for nginx-ingress
+    digest: 5da73a11d4715180d707ca4e5281e28bcf448e2b373094e0796c9af95190e307
+    name: nginx-ingress
+    type: application
+    urls:
+    - https://github.com/hscrystal/helm-charts/releases/download/nginx-ingress-0.1.1/nginx-ingress-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 0.0.0
     created: "2022-11-22T06:29:00.961985315Z"
     description: A Helm chart for nginx-ingress
     digest: d66e3f7ac7f64ecb1a5f94ed845a1f8f59086e7adff448f28a7c4bafa0e6587e
@@ -42,4 +52,4 @@ entries:
     urls:
     - https://github.com/hscrystal/helm-charts/releases/download/traefik-ingress-0.1.0/traefik-ingress-0.1.0.tgz
     version: 0.1.0
-generated: "2022-11-23T09:30:17.18927601Z"
+generated: "2023-07-01T03:46:11.769337193Z"
