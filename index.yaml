@@ -21,6 +21,17 @@ entries:
     urls:
     - https://github.com/hscrystal/helm-charts/releases/download/nginx-ingress-0.1.0/nginx-ingress-0.1.0.tgz
     version: 0.1.0
+  nginx-ingress-external-service:
+  - apiVersion: v2
+    appVersion: 0.0.0
+    created: "2023-07-01T13:48:21.477724861Z"
+    description: A Helm chart for nginx-ingress-external-service
+    digest: 8a206037a5f69d6041046caabd468600cd44194183afab7abc8e806057a92099
+    name: nginx-ingress-external-service
+    type: application
+    urls:
+    - https://github.com/hscrystal/helm-charts/releases/download/nginx-ingress-external-service-0.1.0/nginx-ingress-external-service-0.1.0.tgz
+    version: 0.1.0
   traefik-ingress:
   - apiVersion: v2
     appVersion: 0.1.0
@@ -52,4 +63,4 @@ entries:
     urls:
     - https://github.com/hscrystal/helm-charts/releases/download/traefik-ingress-0.1.0/traefik-ingress-0.1.0.tgz
     version: 0.1.0
-generated: "2023-07-01T03:46:11.769337193Z"
+generated: "2023-07-01T13:48:21.477738761Z"
