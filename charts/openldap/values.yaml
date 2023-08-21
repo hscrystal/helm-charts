@@ -1,0 +1,100 @@
+# Global Docker image parameters
+# Please, note that this will override the image parameters, including dependencies, configured to use the global value
+# Current available global Docker image parameters: imageRegistry, imagePullSecrets and storageClass
+global:
+  imageRegistry: ""
+  ## E.g.
+  ## imagePullSecrets:
+  ##   - myRegistryKeySecretName
+  ##
+  #imagePullSecrets: [""]
+  ## ldapDomain , can be explicit (e.g dc=toto,c=ca) or domain based (e.g example.com)
+  ldapDomain:
+  # Specifies an existing secret to be used for admin and config user passwords. The expected key are LDAP_ADMIN_PASSWORD and LDAP_CONFIG_ADMIN_PASSWORD.
+  # existingSecret: ""
+  ## Default Passwords to use, stored as a secret. Not used if existingSecret is set.
+  adminPassword:  Not@SecurePassw0rd
+  configPassword: Not@SecurePassw0rd
+  ldapPort: 389
+  sslLdapPort: 636
+
+## @section Common parameters
+
+image:
+  # From repository https://hub.docker.com/r/bitnami/openldap/
+  repository: bitnami/openldap
+  tag: 2.6.6
+  pullPolicy: Always
+  pullSecrets: []
+
+# Set the container log level
+# Valid log levels: none, error, warning, info (default), debug, trace
+logLevel: info
+
+service:
+  annotations: {}
+  ## If service type NodePort, define the value here
+  #ldapPortNodePort:
+  #sslLdapPortNodePort:
+  ## List of IP addresses at which the service is available
+  ## Ref: https://kubernetes.io/docs/user-guide/services/#external-ips
+  ##
+  externalIPs: []
+
+  #loadBalancerIP:
+  #loadBalancerSourceRanges: []
+  type: ClusterIP
+  sessionAffinity: None
+
+# Default configuration for openldap as environment variables. These get injected directly in the container.
+# Use the env variables from https://hub.docker.com/r/bitnami/openldap/
+# Be careful, do not modify the following values unless you know exactly what your are doing
+env:
+ BITNAMI_DEBUG: "true"
+ LDAP_LOGLEVEL: "256"
+ LDAP_CONFIG_ADMIN_ENABLED: "yes"
+ LDAP_CONFIG_ADMIN_USERNAME: "config"
+ LDAP_CONFIG_ADMIN_PASSWORD: "configpassword"
+ LDAP_ALLOW_ANON_BINDING: "no"
+ LDAP_SKIP_DEFAULT_TREE: "no"
+
+## User list to create (comma separated list) , can't be use with customLdifFiles
+## Default set by bitnami image
+# users: user01,user02
+
+## User password to create (comma separated list, one for each user)
+## Default set by bitnami image
+# userPasswords: bitnami1, bitnami2
+
+## Group to create and add list of user above
+## Default set by bitnami image
+# group: readers
+
+# Custom openldap schema files used to be used in addition to default schemas
+# customSchemaFiles:
+#   custom.ldif: |-
+#     # custom schema
+#   anothercustom.ldif: |-
+#     # another custom schema
+
+## Existing configmap with custom ldif
+# Can't be use with customLdifFiles
+# Same format as customLdifFiles
+# customLdifCm: my-custom-ldif-cm
+
+## Persist data to a persistent volume
+persistence:
+  enabled: true
+  ## database data Persistent Volume Storage Class
+  ## If defined, storageClassName: <storageClass>
+  ## If set to "-", storageClassName: "", which disables dynamic provisioning
+  ## If undefined (the default) or set to null, no storageClassName spec is
+  ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
+  ##   GKE, AWS & OpenStack)
+  ##
+  # storageClass: "standard-singlewriter"
+  # existingClaim: openldap-pvc
+  accessModes:
+    - ReadWriteOnce
+  size: 8Gi
+  storageClass: ""

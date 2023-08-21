@@ -1,0 +1,7 @@
+questions:
+- variable: global.ldapDomain
+  label: "LDAP Domain"
+  type: string
+  default: "example.org"
+  description: "Root LDAP Domain"
+  group: "global Settings"
