@@ -14,6 +14,9 @@ metadata:
     release: {{ .Release.Name }}
 data:
   LDAP_ROOT: {{ include "global.baseDomain" . }}
+  {{- if .Values.global.adminPassword }}
+  LDAP_ADMIN_PASSWORD: {{ .Values.global.adminPassword }}
+  {{- end }}
   {{- if .Values.users }}
   LDAP_USERS: {{ .Values.users }}
   {{- end }}
