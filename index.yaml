@@ -42,6 +42,17 @@ entries:
     urls:
     - https://github.com/hscrystal/helm-charts/releases/download/nginx-ingress-external-service-0.1.0/nginx-ingress-external-service-0.1.0.tgz
     version: 0.1.0
+  openldap:
+  - apiVersion: v2
+    appVersion: 0.0.0
+    created: "2023-08-21T08:03:52.435342297Z"
+    description: A Helm chart for Openldap
+    digest: 53d09a7480dbe40f380b427668aa80a40a53040adadbf95a9a03a0cd17b2eb1d
+    name: openldap
+    type: application
+    urls:
+    - https://github.com/hscrystal/helm-charts/releases/download/openldap-0.1.0/openldap-0.1.0.tgz
+    version: 0.1.0
   traefik-ingress:
   - apiVersion: v2
     appVersion: 0.1.0
@@ -73,4 +84,4 @@ entries:
     urls:
     - https://github.com/hscrystal/helm-charts/releases/download/traefik-ingress-0.1.0/traefik-ingress-0.1.0.tgz
     version: 0.1.0
-generated: "2023-07-01T13:56:47.792520264Z"
+generated: "2023-08-21T08:03:52.435361297Z"
