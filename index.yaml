@@ -45,6 +45,16 @@ entries:
   openldap:
   - apiVersion: v2
     appVersion: 0.0.0
+    created: "2023-08-21T08:27:34.005650108Z"
+    description: A Helm chart for Openldap
+    digest: 1db4479aa9304b412506dc7a00be1fe8ec83bbaff11e4b09a31f116d052cb022
+    name: openldap
+    type: application
+    urls:
+    - https://github.com/hscrystal/helm-charts/releases/download/openldap-0.1.1/openldap-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 0.0.0
     created: "2023-08-21T08:03:52.435342297Z"
     description: A Helm chart for Openldap
     digest: 53d09a7480dbe40f380b427668aa80a40a53040adadbf95a9a03a0cd17b2eb1d
@@ -84,4 +94,4 @@ entries:
     urls:
     - https://github.com/hscrystal/helm-charts/releases/download/traefik-ingress-0.1.0/traefik-ingress-0.1.0.tgz
     version: 0.1.0
-generated: "2023-08-21T08:03:52.435361297Z"
+generated: "2023-08-21T08:27:34.00605923Z"
